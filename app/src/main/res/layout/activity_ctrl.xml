@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--Toolbar-->
+    <include layout="@layout/toolbar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+        <!--显示温度湿度-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#66ffcc"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="温度"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tempTxt"
+                android:background="@drawable/textview_border"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:text="湿度"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/humTxt"
+                android:layout_width="100dp"
+                android:background="@drawable/textview_border"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+        <!--显示时间距离-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#66ffcc"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="时间"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/timeTxt"
+                android:layout_width="100dp"
+                android:background="@drawable/textview_border"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="距离"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/disTxt"
+                android:layout_width="100dp"
+                android:background="@drawable/textview_border"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--设置时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/edit_time"
+                android:layout_marginLeft="80dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:hint="请输入时间"
+                android:background="@drawable/bg_edittext"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/bt_settime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="设置时间"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--控制方向-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical">
+        <!--前进-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="前" />
+        </LinearLayout>
+        <!--左停右-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/bt_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:text="左" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/bt_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="停" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/bt_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:text="右" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--后退-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="后" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:text="菜单"-->
+        <!--android:textSize="30sp"-->
+        <!--android:background="#fff"/>-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header"/>
+</android.support.v4.widget.DrawerLayout>
