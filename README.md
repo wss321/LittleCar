@@ -1,8 +1,8 @@
 # LittleCar
-
+驱动程序在:https://github.com/wss321/littlecar_driver
 ## 项目介绍
 LittleCar项目是对自制的四驱小车(易优车)的安卓app，通过WIFI连接小车的ESP8266 WIFI模块，通过TCP进行通信，通信协议将在后文介绍。
-## 通信协议
+## 协议
 * 小车IP及端口:192.168.4.1:8080
 * 前: 9W|
 * 后: 9S|
